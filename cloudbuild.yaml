@@ -1,12 +1,4 @@
 steps:
-  # install deps
-- name: 'gcr.io/$PROJECT_ID/glide'
-  env:
-    - PROJECT_ROOT=/workspace
-  args: [
-  'up', '-v'
-  ]
-  # build go dist
 - name: 'gcr.io/cloud-builders/go'
   env:
     - GOPATH=/workspace
@@ -21,10 +13,6 @@ steps:
   '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME',
   '.'
   ]
-
-  # env:
-    # - GOOS=linux
-    # - GOARCH=amd64
 
 images:
 - 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME'
