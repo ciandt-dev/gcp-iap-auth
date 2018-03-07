@@ -1,8 +1,8 @@
 steps:
   # install deps
 - name: 'gcr.io/$PROJECT_ID/glide'
-  env:
-    - PROJECT_ROOT=/workspace'
+  # env:
+    # - PROJECT_ROOT=/workspace'
   args: [
   'up'
   ]
