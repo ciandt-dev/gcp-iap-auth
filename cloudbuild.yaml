@@ -4,7 +4,7 @@ steps:
   env:
     - GOPATH=/workspace
   args: [
-  'install'
+  'up'
   ]
 
   # build go dist
