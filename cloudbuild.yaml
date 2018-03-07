@@ -4,7 +4,7 @@ steps:
   # env:
     - PROJECT_ROOT=/workspace'
   args: [
-  'up'
+  'up', '-v'
   ]
   # build go dist
 - name: 'gcr.io/cloud-builders/go'
