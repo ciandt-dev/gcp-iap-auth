@@ -1,0 +1,21 @@
+steps:
+  # build go dist 
+- name: 'gcr.io/cloud-builders/go'
+  args: [
+  'build',
+  '-o', 'build/gcp-iap-auth'
+  ]
+  # build docker image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+  'build',
+  '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME',
+  '.'
+  ]
+
+  # env:
+    # - GOOS=linux
+    # - GOARCH=amd64
+
+images:
+- 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME'
