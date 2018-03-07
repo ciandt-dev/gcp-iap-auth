@@ -3,8 +3,7 @@ steps:
   env:
     - GOPATH=/workspace
   args: [
-  'build',
-  '-o', 'build/gcp-iap-auth'
+  'build'
   ]
   # build docker image
 - name: 'gcr.io/cloud-builders/docker'
