@@ -1,5 +1,14 @@
 steps:
-  # build go dist 
+  # install deps
+- name: 'gcr.io/cloud-builders-community/glide'
+  env:
+    - GOPATH=/workspace
+  args: [
+  'glide',
+  'install'
+  ]
+
+  # build go dist
 - name: 'gcr.io/cloud-builders/go'
   env:
     - GOPATH=/workspace
