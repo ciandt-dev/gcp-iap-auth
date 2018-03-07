@@ -2,10 +2,9 @@ steps:
 - name: 'gcr.io/cloud-builders/go'
   env:
     - GOPATH=/workspace
-    - GO15VENDOREXPERIMENT=1
   args: [
   'build',
-  '-o', './build/gcp-iap-auth'
+  '-o', 'build/gcp-iap-auth'
   ]
   # build docker image
 - name: 'gcr.io/cloud-builders/docker'
