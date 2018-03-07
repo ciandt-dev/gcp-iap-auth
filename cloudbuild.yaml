@@ -1,6 +1,8 @@
 steps:
   # build go dist 
 - name: 'gcr.io/cloud-builders/go'
+  env:
+    - GOPATH=/workspace
   args: [
   'build',
   '-o', 'build/gcp-iap-auth'
