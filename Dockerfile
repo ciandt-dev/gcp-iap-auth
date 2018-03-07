@@ -3,7 +3,7 @@ LABEL maintainer "Mario Freitas <imkira@gmail.com>"
 
 WORKDIR /usr/local/bin
 
-COPY build/gcp-iap-auth /usr/local/bin/gcp-iap-auth
+COPY ./build/gcp-iap-auth /usr/local/bin/gcp-iap-auth
 # RUN apk add --no-cache --update \
 #       ca-certificates \
 #       curl \
