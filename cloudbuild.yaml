@@ -1,0 +1,19 @@
+steps:
+- name: 'gcr.io/cloud-builders/go'
+  env:
+    - GOPATH=/workspace
+  args: [
+  'build', '-o', '/workspace/gcp-iap-auth'
+  ]
+  # build docker image
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+  'build',
+  '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME',
+  '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID',
+  '.'
+  ]
+
+images:
+- 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME'
+- 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID'
