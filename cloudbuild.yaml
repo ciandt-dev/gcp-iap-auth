@@ -9,11 +9,11 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [
   'build',
-  '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME',
-  '-t', 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID',
+  '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME',
+  '-t', 'gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID',
   '.'
   ]
 
 images:
-- 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME'
-- 'eu.gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID'
+- 'gcr.io/$PROJECT_ID/$REPO_NAME:$BRANCH_NAME'
+- 'gcr.io/$PROJECT_ID/$REPO_NAME:$REVISION_ID'
