@@ -15,5 +15,5 @@ deploy:
     - dist/*
   skip_cleanup: true
   on:
-    repo: ciandt-dev/gcp-iap-auth
+    repo: imkira/gcp-iap-auth
     tags: true
